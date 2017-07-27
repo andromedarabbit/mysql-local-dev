@@ -17,11 +17,7 @@ var mysqldumpPath = which('mysqldump').stdout;
 
 var backupRootDir = path.join(toolbox_js.getHomeDir(), '.backup');
 
-var serverAddress = 'localhost';
-
-if(argv.host) {
-    serverAddress = argv.host;
-}
+var serverAddress = shell.env['MYSQL_HOSTNAME'];
 
 var target = "";
 if(argv.target) {

@@ -10,7 +10,7 @@ var argv = require('optimist').argv;
 var dropAndCreate = true;
 var backupBeforeDrop = false;
 
-var dumpRootDir = '/docker-entrypoint-initdb.d';
+var dumpRootDir = '/usr/src/app/dumps';
 
 var mysqlPath = which('mysql').stdout;
 var mysqldumpPath = which('mysqldump').stdout;

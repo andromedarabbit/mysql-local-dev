@@ -1,9 +1,7 @@
 #!/bin/bash
-THIS_DIR=$(cd "$(dirname "$0")"; pwd)
+set -eo pipefail
 
 source ./exports.sh
-
-mkdir -p "${THIS_DIR}/dumps"
 
 docker run -t --link ${CONTAINER} \
     -v "${THIS_DIR}/info.js:/usr/src/app/info.js" \
